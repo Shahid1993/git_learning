@@ -47,14 +47,42 @@ git status
 git push origin master
 ```
 
-## Tags
+## [Tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 
 #### List all tags
 ```shell
 git tag --list
 #or
 git tag -l
+# or
+git tag
+# for listing a particular series of tags
+git tag -l "v1.8.5*"
 ```
+
+#### Creating Tags
+##### Annotated Tags
+```shell
+git tag -a v1.4 -m "my version 1.4"
+```
+##### Lightweight Tags
+```shell
+git tag v1.4-lw
+```
+
+
+#### Show Tag Data
+```shell
+git show v1.4
+```
+
+#### Sharing Tags
+```shell
+git push origin <tagname>.
+# To Push all tags at once
+git push origin --tags
+```
+
 
 #### Delete list of tags
 ```shell
@@ -69,6 +97,25 @@ git tag -d 12345
 git push origin :refs/tags/12345
 # alternative approach
 git push --delete origin tagName
-```
 git tag -d tagName
+```
+
+#### Tagging Later
+To tag that commit, you specify the commit checksum (or part of it) at the end of the command:
+```shell
+ git tag -a v1.2 9fceb02
+ ```
+
+
+## Git Log
+```shell
+git log --pretty=oneline
+```
+
+
+
+
+
+
+
 
