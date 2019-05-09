@@ -88,7 +88,19 @@ git push origin --tags
 ```shell
 git tag --list 'v-*' | xargs -I % echo "git tag -d %; git push --delete origin %" | sh
 ```
+#### Deleting Tags
+##### Delete tag in local repository
+```shell
+git tag -d <tagname>
+```
 
+##### Delete a tag from a remote server
+```shell
+git push <remote> :refs/tags/<tagname>
+# or 
+git push origin --delete <tagname>
+```
+ 
 #### Delete a tag
 ```shell
 # delete local tag '12345'
@@ -106,6 +118,15 @@ To tag that commit, you specify the commit checksum (or part of it) at the end o
  git tag -a v1.2 9fceb02
  ```
 
+#### Checking out Tags
+```shell 
+git checkout 2.0.0     # checkout in 'detached HEAD' state.
+
+#If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again.
+git checkout -b <new-branch>
+git checkout -b version2 v2.0.0
+```
 
 ## Git Log
 ```shell
