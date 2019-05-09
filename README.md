@@ -47,4 +47,28 @@ git status
 git push origin master
 ```
 
+## Tags
+
+#### List all tags
+```shell
+git tag --list
+#or
+git tag -l
+```
+
+#### Delete list of tags
+```shell
+git tag --list 'v-*' | xargs -I % echo "git tag -d %; git push --delete origin %" | sh
+```
+
+#### Delete a tag
+```shell
+# delete local tag '12345'
+git tag -d 12345
+# delete remote tag '12345' (eg, GitHub version too)
+git push origin :refs/tags/12345
+# alternative approach
+git push --delete origin tagName
+```
+git tag -d tagName
 
