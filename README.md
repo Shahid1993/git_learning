@@ -137,6 +137,9 @@ git log --pretty=oneline
 
 
 
+## Resources :
+- [__git__--distributed-is-the-new-centralized](https://git-scm.com/doc)
+- [__Pro Git__ Book](https://git-scm.com/book/en/v2)
 
 
 
