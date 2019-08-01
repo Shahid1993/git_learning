@@ -133,7 +133,15 @@ git checkout -b version2 v2.0.0
 git log --pretty=oneline
 ```
 
+## [.gitignore not working for directories](https://stackoverflow.com/questions/22924633/gitignore-is-not-ignoring-directories)
+  Since the node_modules directory is already tracked as part of the repository, the .gitignore rule will not apply to it.
 
+  You need to untrack the directory from git using
+  ```shell
+  git rm -r --cached node_modules
+  git commit -m "removing node_modules"
+  ```
+  
 
 
 
