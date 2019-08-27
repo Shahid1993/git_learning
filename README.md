@@ -142,8 +142,9 @@ git log --pretty=oneline
   git commit -m "removing node_modules"
   ```
   
-  ## [Undo git init](https://stackoverflow.com/questions/29381674/how-to-undo-git-init)
-    When you run git init, a new .git folder its created on your project directory with some other subdirectories for objects, refs/heads, refs/tags , since its a dot file (.git)its hidden by default, so if you are running linux do the following.
+  ## [Undo git init](https://stackoverflow.com/questions/29381674/how-to-undo-git-init)  
+  
+   When you run git init, a new .git folder its created on your project directory with some other subdirectories for  objects, refs/heads, refs/tags , since its a dot file (.git)its hidden by default, so if you are running linux do the following.
  ```shell
  cd myFolder
  rm -rf .git
